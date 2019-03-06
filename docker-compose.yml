@@ -1,0 +1,12 @@
+version: '3.5'
+services:
+    gomqtt:
+        image: gomqtt:latest
+        build: .
+        container_name: mqtt
+        ports: 
+            - 9001:9001
+            - 1883:1883
+        volumes:
+            - ./app:/app
+        tty: true
